@@ -1,0 +1,18 @@
+step 1 : get kafka using cmd
+(cd C:\Users\dell\Downloads\kafka\kafka)
+
+step 2 : start the kafka environment
+(.\bin\windows\kafka-server-start.bat .\config\server.properties)
+
+step 3 : start the kafka environment
+(.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties)
+
+step 4 : create a topic to store event
+(.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092)
+
+step 5 : create event in your topic 
+(.\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092)
+
+step 6 : view your event 
+(.\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092)
+
