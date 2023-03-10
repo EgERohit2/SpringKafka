@@ -12,4 +12,11 @@ public class KafkaConfiguration {
 	public NewTopic rohitTopic() {
 		return TopicBuilder.name("rohit").build();
 	}
+	
+	@Bean
+	public NewTopic rohitTopicnew() {
+		return TopicBuilder.name("rohit_json").build();
+	}
+	
+	
 }
